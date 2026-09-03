@@ -19,15 +19,15 @@ export default function LocationSection() {
 
         <div className="mt-12 rounded-[2rem] bg-[#fffdf8] p-8 text-center shadow-2xl md:p-12">
           <h3 className="text-3xl font-bold text-[#c9785f]">
-            मुक्काम नागलोली
+            मु. नागलोली
           </h3>
 
           <p className="mt-5 text-lg leading-9 text-[#6f5a60]">
-            पोस्ट डोंगुरी
+            पो. दान्द्गुरी
             <br />
-            तालुका श्रीवर्धन
+            ता श्रीवर्धन
             <br />
-            जिल्हा रायगड
+            जि रायगड
             <br />
             महाराष्ट्र
           </p>
