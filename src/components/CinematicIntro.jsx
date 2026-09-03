@@ -4,7 +4,7 @@ export default function CinematicIntro() {
   const openInvitation = () => {
     document
       .getElementById("invitation")
-      ?.scrollIntelderew({ behavior: "smooth" });
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
