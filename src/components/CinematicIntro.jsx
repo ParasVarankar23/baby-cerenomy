@@ -1,7 +1,21 @@
 "use client";
 
+import { useRef } from "react";
+
 export default function CinematicIntro() {
-  const openInvitation = () => {
+  const audioRef = useRef(null);
+
+  const openInvitation = async () => {
+    if (!audioRef.current) {
+      audioRef.current = new Audio("/music/barse-music.mp3");
+      audioRef.current.loop = true;
+      audioRef.current.volume = 0.35;
+    }
+
+    try {
+      await audioRef.current.play();
+    } catch {}
+
     document
       .getElementById("invitation")
       ?.scrollIntoView({ behavior: "smooth" });
