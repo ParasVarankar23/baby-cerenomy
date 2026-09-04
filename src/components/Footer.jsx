@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="mx-auto mt-8 h-px max-w-xs bg-[#d8bf8b]/60" />
 
       <p className="mt-6 text-xs text-[#9b8187]">
-        मुक्काम नागलोली • पोस्ट डोंगुरी • ता. श्रीवर्धन • जि. रायगड
+        मु. नागलोली • पो. दान्द्गुरी • ता. श्रीवर्धन • जि. रायगड
       </p>
     </footer>
   );

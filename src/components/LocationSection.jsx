@@ -29,7 +29,7 @@ export default function LocationSection() {
             <br />
             जि रायगड
             <br />
-            महाराष्ट्र
+            महाराष्ट
           </p>
 
           <a
