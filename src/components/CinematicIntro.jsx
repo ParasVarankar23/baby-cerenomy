@@ -1,9 +1,10 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function CinematicIntro() {
   const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const openInvitation = async () => {
     if (!audioRef.current) {
@@ -14,11 +15,10 @@ export default function CinematicIntro() {
 
     try {
       await audioRef.current.play();
-    } catch {}
-
-    document
-      .getElementById("invitation")
-      ?.scrollIntoView({ behavior: "smooth" });
+      setIsPlaying(true);
+    } catch (error) {
+      console.error("Unable to play invitation music.", error);
+    }
   };
 
   return (
@@ -59,10 +59,11 @@ export default function CinematicIntro() {
         </p>
 
         <button
+          type="button"
           onClick={openInvitation}
           className="mt-10 rounded-full bg-[#c9785f] px-9 py-4 font-bold text-white shadow-xl shadow-[#c9785f]/20 transition hover:-translate-y-1 hover:bg-[#b96750]"
         >
-          आमंत्रण उघडा 💌
+          {isPlaying ? "संगीत सुरू आहे 🎵" : "आमंत्रण उघडा 💌"}
         </button>
 
         <p className="mt-5 text-xs text-[#9b8187]">
